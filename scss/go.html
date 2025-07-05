@@ -1,160 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Direct Selling Business</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background: #007bff;
-      color: white;
-      padding: 1rem 0;
-      text-align: center;
-    }
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      padding: 0;
-    }
-    nav ul li {
-      margin: 0 1rem;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 2rem;
-      background: white;
-      margin: 1rem auto;
-      max-width: 1000px;
-      border-radius: 10px;
-    }
-    .hero {
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .btn {
-      background: #28a745;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-    .products, .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-    }
-    .product, .testimonial {
-      background: #f8f9fa;
-      padding: 1rem;
-      border-radius: 5px;
-    }
-    footer {
-      background: #343a40;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-    .social a {
-      margin: 0 10px;
-      color: white;
-      text-decoration: none;
-      font-size: 20px;
-    }
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 1.8rem; }
-    }
-  </style>
-</head>
-<body>
+<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
 
-  <header>
-    <h1>Vijendra's Direct Selling Business</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+						<script>
 
-  <section class="hero">
-    <h1>Grow Your Income with Direct Selling</h1>
-    <p>Join a community of successful direct sellers making a difference.</p>
-    <a href="#contact" class="btn">Get Started</a>
-  </section>
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
 
-  <section id="about">
-    <h2>About the Business</h2>
-    <p>We help individuals achieve financial independence by offering high-quality products and a strong referral-based income model. Whether you're looking to earn part-time or full-time, our team is here to support your growth.</p>
-  </section>
+						// Create an array of typing text
+						const typingTexts = [
+						'Direct Selling ',
+						
+						];
 
-  <section id="products">
-    <h2>Our Products</h2>
-    <div class="products">
-      <div class="product">
-        <h3>Health Supplements</h3>
-        <p>Boost your immunity and well-being with our trusted supplements.</p>
-      </div>
-      <div class="product">
-        <h3>Personal Care</h3>
-        <p>Natural skincare and grooming products for a confident you.</p>
-      </div>
-      <div class="product">
-        <h3>Home Essentials</h3>
-        <p>Eco-friendly and effective products for daily use.</p>
-      </div>
-    </div>
-  </section>
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
 
-  <section id="testimonials">
-    <h2>What Our Partners Say</h2>
-    <div class="testimonials">
-      <div class="testimonial">
-        <p>"I started part-time and now I’m earning more than my full-time job. Thank you for the support!"</p>
-        <strong>- Ramesh, Delhi</strong>
-      </div>
-      <div class="testimonial">
-        <p>"This business has changed my life — I now have time and financial freedom."</p>
-        <strong>- Priya, Indore</strong>
-      </div>
-    </div>
-  </section>
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Interested in joining or learning more?</p>
-    <p><strong>Email:</strong> vijendrabusiness@example.com</p>
-    <p><strong>Phone:</strong> +91-99936-40007</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIRlYgrysHjqKKiaKybgsq2jLI91UEQSqBfgXA2_GG6KsSuA/viewform?usp=sharing" class="btn">Fill Interest Form</a>
-  </section>
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
 
-  <footer>
-    <p>© 2025 Vijendra's Direct Selling Business</p>
-    <div class="social">
-      <a href="#">YouTube</a>
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">LinkedIn</a>
-    </div>
-  </footer>
-
-</body>
-</html>
+						</script>
