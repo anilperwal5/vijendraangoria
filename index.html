@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rishabh Mishra Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+<!-- Owl Carousel JS -->
+<script src="js/owl.carousel.min.js"></script>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Vijendra Angoria</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Business Info</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+			  <li class="nav-item"><a href="#enquire-section" class="nav-link"><span>Enquiry</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/c.jpg);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Vijendra Angoria</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Direct Selling ',
+						
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+	<section class="ftco-section" id="about-section">
+  <div class="container">
+    <div class="row justify-content-center pb-5">
+      <div class="col-md-10 heading-section text-center ftco-animate">
+        <h1 class="big big-2">About Me</h1>
+        <h2 class="mb-4">About Me</h2>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="card p-4 shadow bg-dark" style="border-radius: 15px;">
+          <div class="card-body">
+            <p class="card-text">
+              I have 8 years of experience in the Direct Selling industry, during which I have 
+              built strong teams, trained individuals, and consistently achieved sales targets across 
+              health, wellness, personal care, and FMCG products. My focus has been on ethical practices, 
+              team development, and market expansion. This experience has given me the skills to grow 
+              sustainable networks and support new business opportunities with confidence.
+              <br><br>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi expedita recusandae ea deleniti tempore architecto impedit atque ipsum nulla ab magnam fuga sapiente, adipisci placeat eius sint eveniet explicabo magni illum quo pariatur aperiam modi autem! Quisquam nihil, obcaecati perferendis maxime exercitationem adipisci enim inventore reiciendis eum iste ut officia!
+            </p>
+            <!-- Optional YouTube Video Embed -->
+            <!--
+            <div class="text-center mt-4">
+              <iframe width="600" height="200" 
+                src="https://www.youtube.com/embed/xJULE46ShuE" 
+                title="YouTube video player" frameborder="0" 
+                allow="autoplay; encrypted-media; accelerometer; clipboard-write; gyroscope; picture-in-picture" 
+                allowfullscreen>
+              </iframe>
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+
+
+<!-- Testimonials Section with Carousel -->
+<section class="ftco-section" id="testimonials">
+  <div class="container">
+    <div class="row justify-content-center pb-5">
+      <div class="col-md-10 heading-section text-center ftco-animate">
+        <h1 class="big big-2">Testimonials</h1>
+        <h2 class="mb-4">What Our Clients Say</h2>
+      </div>
+    </div>
+
+    <div class="owl-carousel testimonial-carousel">
+      <!-- Card 1 -->
+      <div class="card p-4 text-center" style="background-color: rgb(22, 20, 20); border-radius: 15px; box-shadow: 0 4px 15px rgba(75, 70, 70, 0.1);">
+        <div class="user-img mb-4 mx-auto" style="background-image: url('images/c.jpg'); width: 100px; height: 100px; background-size: cover; border-radius: 50%;"></div>
+        <div class="text">
+          <p class="mb-4">"I’ve transformed my life with this direct selling business. Vijendra's mentorship is amazing!"</p>
+          <p class="name font-weight-bold mb-0">Amit Sharma</p>
+          <span class="position text-muted">Business Partner</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card p-4 text-center" style="background-color: rgb(22, 20, 20); border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <div class="user-img mb-4 mx-auto" style="background-image: url('images/c.jpg'); width: 100px; height: 100px; background-size: cover; border-radius: 50%;"></div>
+        <div class="text">
+          <p class="mb-4">"Great support, strong products, and a rewarding journey. Highly recommend this business!"</p>
+          <p class="name font-weight-bold mb-0">Neha Verma</p>
+          <span class="position text-muted">Team Leader</span>
+        </div>
+      </div>
+
+      <!-- Add more cards as needed -->
+    </div>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section  class="ftco-section bg-dark" id="products">
+  <div  class="container">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-10 heading-section text-center ftco-animate">
+        <h1 class="big big-2">Products</h1>
+        <h2 class="mb-4">Explore Our Range</h2>
+        <p>Health, wellness, and lifestyle products that empower your life.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Product 1 -->
+      <div class="col-md-4 d-flex ftco-animate">
+        <div style="background-color: rgb(51, 52, 53);" class="card p-4 text-center" style="border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+          <img src="images/h.webp" class="img-fluid mb-3 rounded" alt="Health Supplement">
+          <h4>Health Supplements</h4>
+          <p>Boost immunity, improve energy, and support daily wellness with our trusted supplements.</p>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-md-4 d-flex ftco-animate">
+        <div style="background-color: rgb(51, 52, 53);" class="card p-4 text-center" style="border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+          <img src="images/p.jpg" class="img-fluid mb-3 rounded" alt="Personal Care">
+          <h4>Personal Care</h4>
+          <p>From natural skincare to grooming – care for yourself with safe and effective products.</p>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-md-4 d-flex ftco-animate">
+        <div style="background-color: rgb(51, 52, 53);" class="card p-4 text-center" style="border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+          <img src="images/OIP.jpg" class="img-fluid mb-3 rounded" alt="Home Essentials">
+          <h4>Home Essentials</h4>
+          <p>Eco-friendly daily-use products for your home – effective, safe, and affordable.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <section class="ftco-section ftco-no-pb" id="resume-section">
+  <div class="container">
+    <div class="row justify-content-center pb-5">
+      <div class="col-md-10 heading-section text-center ftco-animate">
+        <h1 class="big big-2">INFORMATION</h1>
+        <h2 class="mb-4">INFORMATION</h2>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="card p-4 shadow bg-dark" style="border-radius: 15px;">
+          <div class="card-body">
+            <p class="card-text">
+              Hello, as you know, in today’s modern world, a human needs a lot more. Earlier there was only one slogan – 
+              “Food, clothing, and shelter,” and a person used to spend their whole life with just that.
+              <br><br>
+              But today it’s not like that. Today’s environment has changed a lot; the ways of living a modern life have changed.
+              In modern life, people’s dreams have become bigger, technology has increased, and with the new age, 
+              different thinking and different ways of working have emerged – everything has changed.
+              <br><br>
+              And in this changing life, humans also had to change. They didn’t wish to change, but they were forced to change. 
+              They had to change because when they looked around, they saw change everywhere, and they realized that everything is changing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>  
+
+
+<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section text-center ftco-animate">
+        <h1 class="big big-2">Contact</h1>
+        <h2 class="mb-4">Contact Me</h2>
+        <p>Below are the details to reach out to me!</p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-11">
+        <div class="card p-4 shadow bg-dark" style="border-radius: 15px;">
+          <div class="card-body">
+            <div class="row d-md-flex contact-info">
+              <div class="col-md-6 col-lg-4 d-flex ftco-animate">
+                <div class="align-self-stretch box p-4 text-center">
+                  <div class="icon d-flex align-items-center justify-content-center">
+                    <span class="icon-map-signs"></span>
+                  </div>
+                  <h3 class="mb-4">Address</h3>
+                  <p>Indore, India</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 d-flex ftco-animate">
+                <div class="align-self-stretch box p-4 text-center">
+                  <div class="icon d-flex align-items-center justify-content-center">
+                    <span class="icon-phone2"></span>
+                  </div>
+                  <h3 class="mb-4">Contact Number</h3>
+                  <p><a href="tel://9993640007">99936-40007</a></p>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 d-flex ftco-animate">
+                <div class="align-self-stretch box p-4 text-center">
+                  <div class="icon d-flex align-items-center justify-content-center">
+                    <span class="icon-paper-plane"></span>
+                  </div>
+                  <h3 class="mb-4">Email Address</h3>
+                  <p><a href="mailto:awplvijendradiamond2018@gmail.com">awplvijendradiamond2018@gmail.com</a></p>
+                </div>
+              </div>
+
+            </div> <!-- .row -->
+          </div> <!-- .card-body -->
+        </div> <!-- .card -->
+      </div> <!-- .col -->
+    </div> <!-- .row -->
+  </div> <!-- .container -->
+</section>
+
+
+
+ <!-- Have a question -->
+
+ <section class="ftco-section ftco-no-pb" id="enquire-section"></section>
+  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/rishabhnmishra/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/rishabhnmishra/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+   </section>
+
+   <!-- end have a question -->
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
