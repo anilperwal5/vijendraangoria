@@ -3793,8 +3793,10 @@ input[type="button"].btn-block {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
+  color: #999999;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem; }
+  
   .card > hr {
     margin-right: 0;
     margin-left: 0; }
