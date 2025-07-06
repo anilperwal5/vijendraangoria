@@ -300,7 +300,13 @@
   });
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  // Initialize the Bootstrap modal
+  const hiringModal = new bootstrap.Modal(document.getElementById('hiringRequirementModal'));
 
+  // Show the modal when the page loads
+  hiringModal.show();
+});
 
 
 })(jQuery);
